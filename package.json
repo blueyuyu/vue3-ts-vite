@@ -11,7 +11,9 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "vue": "^3.3.11"
+    "path": "^0.12.7",
+    "vue": "^3.3.11",
+    "vue-router": "4"
   },
   "devDependencies": {
     "@types/node": "^20.10.7",
