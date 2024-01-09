@@ -1,9 +1,5 @@
 <script setup lang="ts">
 import HelloWorld from "./components/HelloWorld.vue";
-console.log("2222", 2222);
-const a = "aaab";
-
-const testFn = ()=>{}
 </script>
 
 <template>
