@@ -1,0 +1,43 @@
+{
+    // env 字段用于指定代码运行的环境
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    // 配置extends扩展，extends 可以继承已有的配置，也可以使用npm包提供的配置
+    "extends": [
+        "eslint:recommended", // 使用 eslint 推荐的配置
+        "plugin:@typescript-eslint/recommended", // 使用eslint推荐的ts配置
+        "plugin:vue/vue3-essential",
+        "plugin:prettier/recommended"
+    ],
+    // parser 解析 .vue 文件
+    "parser": "vue-eslint-parser",
+    // eslint ESLint >= v8.x 需指定，"parserOptions": "latest",
+    "parserOptions": {
+        "ecmaVersion": "latest",
+        // 内部 parser 解析 .vue 文件 script 代码
+        "parser": "@typescript-eslint/parser",
+        "sourceType": "module"
+    },
+    // 配置eslint-plugin-vue插件
+    "plugins": [
+        "@typescript-eslint",
+        "vue"
+    ],
+    // 自定义规则
+    "rules": {
+        // 对未使用的变量警告
+        "no-unused-vars":"off",
+        "@typescript-eslint/no-unused-vars":"warn",
+        // any类型警告
+        "@typescript-eslint/no-explicit-any":"warn",
+        // 关闭模板根目录有效性检查
+        "vue/valid-template-root":"off", 
+        // 设置缩进格式
+        "indent":["error",2],
+        "prettier/prettier": ["error", { "endOfLine": "auto","semi": true }],
+        "vue/no-unused-vars":"warn"
+    },
+    "ignorePatterns": ["src/**/*.test.ts", "src/frontend/generated/*"]
+}
